@@ -33,6 +33,10 @@
  * Set uri with password (const uri = "mongodb+srv://dbuser1:ohO160tFcuYcLdXx@cluster0.pyvcmep.mongodb.net/?retryWrites=true&w=majority";)
  * Set client (const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });)
  * Go to (https://www.mongodb.com/docs/drivers/node/current/usage-examples/insertOne/) and use the async await function to store doc or object to the mongodb
+ * -----------------------------
+ * --CRUD: CREATE. READ. UPDATE-
+ * -----------------------------
+ * #######CRUD is an acronym for: CREATE. READ. UPDATE. DELETE.##########
  * ----CLIENT SIDE----
  * Make a client side react app
  * Make a form to get user
@@ -50,5 +54,25 @@
  * ----SERVER SIDE----
  * Create get api to show data from mongodb to serverside
  * Use find function to do that follow this url (https://www.mongodb.com/docs/drivers/node/current/usage-examples/find/)
+ * ----CLIENT SIDE----
+ * Fetch and show data from server to client side.
+ * -----------------------------
+ * --------CRUD: DELETE---------
+ * -----------------------------
+ * We are able to create, read, update our data and now we need to apply DELETE OPERATION.
+ * ----CLIENT SIDE----
+ * Create delete button add handler to the button
+ * Setup delete confirmation
+ * ----SERVER SIDE----
+ * Delete operation follow this url (https://www.mongodb.com/docs/drivers/node/current/usage-examples/deleteOne/)
+ * Create async function 
+ * Declare id from the req params
+ * Import or make require the objectId (const ObjectId = require('mongodb').ObjectId;)
+ * Declare the query (const query = {_id: ObjectId(id)};)
+ * Finally use the deleteOne into result var
+ * ----CLIENT SIDE----
+ * Create the dynamic url for fetch(delete method)
+ * After fetch conditionally console log the res
+ * Declare remaining and filter to delete user from UI without reloading
  * 
  */
