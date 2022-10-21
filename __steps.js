@@ -8,6 +8,8 @@
  * Run this command >> npm i express cors mongodb (to install express, cors and mongodb at same time)
  * Create index.js file
  * Server side setup COMPLETED!!!
+ * 
+ * 
  * -----------------------------
  * -----SETUP NODE EXPRESS------
  * -----------------------------
@@ -21,6 +23,8 @@
  * Set app.listen function
  * Go to package.json >> scripts >> add this two line scripts >> "start": "node index.js", "start-dev" : "nodemon index.js",
  * Run this command - npm run start-dev
+ * 
+ * 
  * -----------------------------
  * -----SETUP MONGODB ATLAS-----
  * -----------------------------
@@ -33,6 +37,8 @@
  * Set uri with password (const uri = "mongodb+srv://dbuser1:ohO160tFcuYcLdXx@cluster0.pyvcmep.mongodb.net/?retryWrites=true&w=majority";)
  * Set client (const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });)
  * Go to (https://www.mongodb.com/docs/drivers/node/current/usage-examples/insertOne/) and use the async await function to store doc or object to the mongodb
+ * 
+ * 
  * -----------------------------
  * --CRUD: CREATE. READ. UPDATE-
  * -----------------------------
@@ -56,6 +62,8 @@
  * Use find function to do that follow this url (https://www.mongodb.com/docs/drivers/node/current/usage-examples/find/)
  * ----CLIENT SIDE----
  * Fetch and show data from server to client side.
+ * 
+ * 
  * -----------------------------
  * --------CRUD: DELETE---------
  * -----------------------------
@@ -75,4 +83,33 @@
  * After fetch conditionally console log the res
  * Declare remaining and filter to delete user from UI without reloading
  * 
+ * 
+ * -----------------------------
+ * --------CRUD: UPDATE---------
+ * -----------------------------
+ * ----CLIENT SIDE----
+ * Make a new component
+ * Set route with params
+ * Destructure id from the params
+ * Set link template sting on home component to go to the update route for availabel user.
+ * ----SERVER SIDE----
+ * Create a findOne api follow this url (https://www.mongodb.com/docs/drivers/node/current/usage-examples/findOne/)
+ * Declare id from req params
+ * Declare query same as CRUD DELETE
+ * Finally use the findOne into result var
+ * ----CLIENT SIDE----
+ * Create the dynamic url for fetch(update method)
+ * After fetch set data to the user
+ * Create a form
+ * Add clickhandler
+ * Get data from the input field and create a user obj
+ * Fetch user to send the updated data to the server (method: 'PUT')
+ * ----SERVER SIDE----
+ * Create PUT api to get updated user from the client side
+ * Declare id
+ * Take updatedUser from req body
+ * Filter using ObjectId Follow this url (https://www.mongodb.com/docs/drivers/node/current/usage-examples/updateOne/)
+ * Use upsert from the mongo doccumentation
+ * Use updatedDoc $set
+ * Finally use updateOne and send the res
  */
